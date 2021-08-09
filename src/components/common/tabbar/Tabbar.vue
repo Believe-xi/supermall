@@ -16,7 +16,7 @@ export default {
   height: 49px;
   display: flex;
   text-align: center;
-
+  z-index: 9;
   position: fixed;
   left: 0;
   right: 0;

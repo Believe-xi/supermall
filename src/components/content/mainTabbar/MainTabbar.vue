@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tabbar>
+    <tabbar class="tab-bar ignore">
       <tabbar-item path="/home">
         <template v-slot:itemImg>
           <img src="~assets/img/tabbar/home.svg" alt="" />
@@ -62,5 +62,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.tab-bar {
+  /* font-size: 14px; */
+}
 </style>

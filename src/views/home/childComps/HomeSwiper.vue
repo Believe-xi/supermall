@@ -1,11 +1,11 @@
 <template>
   <div>
-    <swiper>
+    <swiper class="home-swiper">
       <template>
         <swiper-item v-for="item in banner" :key="item.id">
           <template> 
             <a :href="item.link">
-              <img :src="item.image" alt="">
+              <img :src="item.image" alt="" @load="imgLoad">
             </a>
           </template>
         </swiper-item>
@@ -25,12 +25,27 @@ export default {
       },
     },
   },
+  data(){
+    return {
+      flag:true
+    }
+  },
   components: {
     Swiper,
     SwiperItem,
   },
+  methods:{
+    imgLoad(){
+      if(this.flag)
+      this.$emit('imgLoad')
+      this.flag = false
+    }
+  }
 };
 </script>
 
-<style>
+<style scoped>
+  .home-swiper{
+    /* padding-top: 44px; */
+  }
 </style>

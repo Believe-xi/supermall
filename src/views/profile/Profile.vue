@@ -1,14 +1,22 @@
 <template>
-  <div>profile组件</div>
-  
+  <div>
+
+  </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
 
+    }
+  },
+  components: {
+
+  }
 }
 </script>
 
-<style>
+<style scoped >
 
 </style>

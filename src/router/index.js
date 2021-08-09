@@ -12,14 +12,18 @@ const Shopcart = () =>
 
 const Profile = () =>
   import ('views/profile/Profile')
+
+const Detail = () =>
+  import ('views/detail/Detail.vue')
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', redirect: '/home' },
-  { path: '/home', component: Home },
-  { path: '/category', component: Category },
-  { path: '/shopcart', component: Shopcart },
-  { path: '/profile', component: Profile },
+  { path: '/', name: '/', redirect: '/home' },
+  { path: '/home', name: 'Home', component: Home },
+  { path: '/category', name: 'Category', component: Category },
+  { path: '/shopcart', name: 'Shopcart', component: Shopcart },
+  { path: '/profile', name: 'Profile', component: Profile },
+  { path: '/detail/:iid', name: 'Detail', component: Detail },
 ]
 const router = new VueRouter({
   routes,
